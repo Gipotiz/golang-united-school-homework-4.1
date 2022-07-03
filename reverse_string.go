@@ -3,9 +3,11 @@ package reverse_string
 func ReverseString(input string) (output string) {
 	// solution goes here
 
-	for i := len(input) - 1; i >= 0; i-- {
-		output += string(input[i])
-	}
+	slice := make([]rune, len(input))
 
+	for i, j := len(input)-1, 0; i >= 0; i, j = i-1, j+1 {
+		slice[j] = rune(input[i])
+	}
+	output = string(slice)
 	return
 }
