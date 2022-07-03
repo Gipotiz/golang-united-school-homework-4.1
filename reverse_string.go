@@ -4,12 +4,12 @@ func ReverseString(input string) (output string) {
 	// solution goes here
 
 	arr := []rune(input)
-	var rev_arr []rune
+	var revArr []rune
 
-	for i := len(input) - 1; i >= 0; i-- {
-		rev_arr = append(rev_arr, arr[i])
+	for i := len(arr) - 1; i >= 0; i-- {
+		revArr = append(revArr, arr[i])
 	}
-	output = string(rev_arr)
+	output = string(revArr)
 
 	return
 }
