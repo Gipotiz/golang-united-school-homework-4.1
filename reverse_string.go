@@ -3,11 +3,13 @@ package reverse_string
 func ReverseString(input string) (output string) {
 	// solution goes here
 
-	slice := make([]rune, len(input))
+	arr := []rune(input)
+	var rev_arr []rune
 
-	for i, j := len(input)-1, 0; i >= 0; i, j = i-1, j+1 {
-		slice[j] = rune(input[i])
+	for i := len(input) - 1; i >= 0; i-- {
+		rev_arr = append(rev_arr, arr[i])
 	}
-	output = string(slice)
+	output = string(rev_arr)
+
 	return
 }
